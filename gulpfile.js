@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+require('laravel-elixir-browser-sync');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +13,13 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+    mix.less('app.less')
+        .browserSync([
+            'app/**/*',
+            'public/**/*',
+            'resources/views/**/*'
+        ], {
+            proxy: "localhost:8080",
+            reloadDelay: 2000
+        });
 });
