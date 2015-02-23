@@ -9,6 +9,22 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.2"
+    "bootstrap": "~3.3.2",
+    "bootstrap-material-design": "*"
+  },
+  "overrides": {
+    "bootstrap-material-design": {
+      "main": [
+        "less/material.less",
+        "dist/js/material.js",
+        "less/ripples.less",
+        "dist/js/ripples.js",
+        "less/material-wfont.less",
+        "dist/fonts/Material-Design-Icons.eot",
+        "dist/fonts/Material-Design-Icons.svg",
+        "dist/fonts/Material-Design-Icons.ttf",
+        "dist/fonts/Material-Design-Icons.woff"
+      ]
+    }
   }
 }

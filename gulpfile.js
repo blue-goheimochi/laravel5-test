@@ -41,7 +41,10 @@ elixir.extend('compileBowerComponents', function(){
     gulp.task('compile-bower-components', function () {
         var cssFilter  = gulpFilter('**/*.less');
         var jsFilter   = gulpFilter('**/*.js');
-        var fontFilter = gulpFilter("**/glyphicons-*");
+        var fontFilter = gulpFilter([
+            "**/glyphicons-*",
+            "**/Material-*"
+        ]);
         gulp.src(
             mainBowerFiles()
         )
